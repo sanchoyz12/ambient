@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambient Trading Space | Концентрация и Спокойствие</title>
+    <meta name="description" content="A premium ambient music player for traders to relax, focus, and execute with clarity.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <div class="player-container">
+        <header class="header">
+            <h1>Ambient <span>Trade</span></h1>
+            <p>ничего нет, кроме тебя, и твоей души</p>
+        </header>
+
+        <div class="now-playing">
+            <div class="cover-art" id="cover-art">
+                <i class="fa-solid fa-chart-line"></i>
+                <div class="pulse-ring"></div>
+            </div>
+            <div class="track-info">
+                <h2 id="track-name">Выберите трек</h2>
+                <span class="status" id="playing-status">Пауза</span>
+            </div>
+        </div>
+
+        <div class="progress-box">
+            <div class="progress-container" id="progress-container">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="time-info">
+                <span id="current-time">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn action-btn" id="prev" aria-label="Previous Track"><i class="fa-solid fa-backward-step"></i></button>
+            <button class="btn action-btn play-btn" id="play" aria-label="Play Track"><i class="fa-solid fa-play" id="play-icon"></i></button>
+            <button class="btn action-btn" id="next" aria-label="Next Track"><i class="fa-solid fa-forward-step"></i></button>
+        </div>
+
+        <div class="volume-container">
+            <i class="fa-solid fa-volume-high" id="volume-icon"></i>
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="0.7" aria-label="Volume">
+        </div>
+
+        <div class="playlist-header">
+            <h3>Плейлист</h3>
+        </div>
+        
+        <div class="playlist" id="playlist">
+            <!-- Playlist items injected via JS -->
+        </div>
+
+        <audio id="audio" preload="metadata"></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
